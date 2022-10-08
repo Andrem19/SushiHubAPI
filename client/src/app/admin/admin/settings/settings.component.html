@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row mt-2">
+        <div class="col-3" style="width: 20%;">Email Confirmation: </div>
+        <div *ngIf="trigerSettings" class="col-3" style="width: 20%;">{{settings.emailLetterConfirm}}</div>
+        <div class="col-3" style="width: 20%;"><input [(ngModel)]="newConfirmEmail"  type="text" ></div>
+        <div class="col-3" style="width: 20%;"><button (click)="ChangeConfirmEmail()" class="btn btn-success">Change</button></div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-3" style="width: 20%;">Save Users: </div>
+        <div *ngIf="trigerSettings" class="col-3" style="width: 20%;"></div>
+        <div class="col-3" style="width: 20%;"><input [(ngModel)]="emailToSaveUsers"  type="text" ></div>
+        <div class="col-3" style="width: 20%;"><button (click)="saveUsers()" class="btn btn-success">Change</button></div>
+    </div>
+</div>

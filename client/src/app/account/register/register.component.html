@@ -1,0 +1,74 @@
+<div class="d-flex justify-content-center mt-5">
+    <div *ngIf="innerWidth > 820 else mobile" class="col-3">
+        <div class="form-label-group">
+            <div class="mb-2 mt-5">
+                <h1 class="h6 mb-1 font-weight-light">My Referrer:</h1>
+            </div>
+        <input class="form-control pt-1"
+            type="text"
+            [(ngModel)]="MyReferer"
+            placeholder="My Referrer"
+        >
+    </div>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="text-center mb-4">
+                <h1 class="h3 mb-3 font-weight-normal">Register</h1>
+            </div>
+
+            <app-text-input formControlName="email" [label]="'Email address'"></app-text-input>
+            <app-text-input formControlName="password" [label]="'Password'" [type]="'password'"></app-text-input>
+            <app-text-input formControlName="confirmPassword" [label]="'Confirm Password'" [type]="'password'"></app-text-input>
+            
+
+            <ul class="text-danger list-unstyled" *ngIf="errors">
+                <li *ngFor="let error of errors">
+                    {{error}}
+                </li>
+            </ul>
+
+            <button  class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+        </form>
+        <div class="d-flex justify-content-center mt-3">
+            <button class="inputbutton" style="height: 50px; width: 100%; border-radius: 10px; font-size: 150%" (click)="signInWithFB()">Continue With Facebook</button>
+        </div>
+    </div>
+
+    <ng-template #mobile>
+        <div class="col-12">
+            <div class="form-label-group">
+                <div class="mb-2 mt-5">
+                    <h1 class="h6 mb-1 font-weight-light">My Referrer:</h1>
+                </div>
+            <input class="form-control pt-1"
+                type="text"
+                [(ngModel)]="MyReferer"
+                placeholder="My Referrer"
+            >
+        </div>
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <div class="text-center mb-4">
+                    <h1 class="h3 mb-3 font-weight-normal">Register</h1>
+                </div>
+    
+                <app-text-input formControlName="displayName" [label]="'Display Name'"></app-text-input>
+                <app-text-input formControlName="email" [label]="'Email address'"></app-text-input>
+                <app-text-input formControlName="password" [label]="'Password'" [type]="'password'"></app-text-input>
+    
+                
+    
+                <ul class="text-danger list-unstyled" *ngIf="errors">
+                    <li *ngFor="let error of errors">
+                        {{error}}
+                    </li>
+                </ul>
+    
+                <button  class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+            </form>
+            <div class="d-flex justify-content-center mt-3">
+                <button class="inputbutton" style="height: 50px; width: 100%; border-radius: 10px; font-size: 150%" (click)="signInWithFB()">Continue With Facebook</button>
+            </div>
+        </div>
+
+    </ng-template>
+
+</div>

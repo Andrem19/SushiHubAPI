@@ -1,0 +1,30 @@
+[
+  {
+
+    "Point": "1",
+    "City": "Blackpool",
+    "Street": "Endsleigh Gardens",
+    "PostCode": "FY4 3PA",
+    "House": "40",
+    "FreeZone": false,
+    "DeliveryCost": 5,
+    "latN": 53.8120879,
+    "latS": 53.7765651,
+    "lonW": -3.0568543,
+    "lonE": -3.0188236
+  },
+  {
+
+    "Point": "1",
+    "City": "Blackpool",
+    "Street": "Endsleigh Gardens",
+    "PostCode": "FY4 3PA",
+    "House": "40",
+    "FreeZone": true,
+    "DeliveryCost": 5,
+    "latN": 53.7892181,
+    "latS": 53.7838359,
+    "lonW": -3.0384859,
+    "lonE": -3.0322827
+  }
+]

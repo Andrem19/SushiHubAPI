@@ -1,0 +1,48 @@
+<div class="content">
+    <div class="row d-flex">
+        <div class="col-6">
+            <form [formGroup]="formEmail" (ngSubmit)="onSubmit()">
+                <input formControlName="Email" type="text" class="form-control" style="max-width: 100%;" placeholder="Email">
+                <button type="submit" class="btn btn-primary mt-3">Find User</button>
+            </form>
+        </div>
+        <div *ngIf="(user$ | async)" class="col-3">
+            <button (click)="deleteUser()" class="btn btn-danger">Delete User</button>
+        </div>
+    </div>
+<div *ngIf="(user$ | async)">
+
+    <h1>{{(user$ | async).displayName}}</h1>
+    <h2>Point: {{(user$ | async).point}}</h2>
+
+</div>
+<div *ngIf="(user$ | async)">
+    <div class="row d-flex">
+        <div class="col-12">
+            <input [(ngModel)]="point" type="text">
+            <button (click)="addPoint()" class="btn btn-warning ml-3">Add/Change Point</button>
+        </div>
+        <div class="col-12">
+            <div *ngFor="let role of (user$ | async).roles">
+                <h4>{{role}}</h4>
+            </div>
+            <input [(ngModel)]="roleToAdd" type="text">
+            <button (click)="addRole()" class="btn btn-success ml-3">Add Role</button>
+        </div>
+        <div class="col-12">
+            <input [(ngModel)]="roleToRemove" type="text">
+            <button (click)="removeRole()" class="btn btn-primary ml-3">Remove Roles</button>
+        </div>
+        <div class="col-12">
+            <input [(ngModel)]="newPassword" type="text">
+            <button (click)="changePassword()" class="btn btn-primary ml-3">Change Password</button>
+        </div>
+        <div class="col-12 mt-4">
+            <h4>ChatId: {{(user$ | async).telegramBotChatId}}</h4>
+            <input [(ngModel)]="telegramChatId" type="text">
+            <button (click)="addTChatToken()" class="btn btn-primary ml-3">Add/Change Telegram Token</button>
+        </div>
+        
+    </div>
+</div>
+</div>

@@ -1,0 +1,22 @@
+﻿[
+  {
+    "name": "Filadelfia",
+    "imageUrl": "https://res.cloudinary.com/dodijnztn/image/upload/v1658269957/l-intro-1621611221_n6t8na.jpg"
+  },
+  {
+    "name": "California",
+    "imageUrl": "https://res.cloudinary.com/dodijnztn/image/upload/v1658269957/intro-1636465484_kwaojd.jpg"
+  },
+  {
+    "name": "Maki",
+    "imageUrl": "https://res.cloudinary.com/dodijnztn/image/upload/v1658269957/Screenshot_5-13_rrypou.jpg"
+  },
+  {
+    "name": "Futomaki",
+    "imageUrl": "https://res.cloudinary.com/dodijnztn/image/upload/v1658269957/xfutomaki-sushi.jpg.pagespeed.ic.0SDCRU-2pP_ni2wqb.jpg"
+  },
+  {
+    "name": "Sushi",
+    "imageUrl": "https://res.cloudinary.com/dodijnztn/image/upload/v1658269957/nigirizushi-00-1024x576_vrhuhl.jpg"
+  }
+]

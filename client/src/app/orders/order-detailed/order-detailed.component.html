@@ -1,0 +1,33 @@
+<div class="container mt-5">
+    <div class="row" *ngIf="order">
+      <div class="col-8">
+        <app-basket-summary
+          [items]="order.orderItems"
+          [isBasket]="false"
+          [isOrder]="true"
+      ></app-basket-summary>
+      <div *ngIf="order.deliveryMethod === 1 && order.readyToPickUp === true" class="badge bg-primary text-wrap mb-2" >
+        Order Is Ready To Collect
+      </div>
+      </div>
+      <div class="col-4">
+        <app-order-totals
+          [shippingPrice]="order.shippingPrice"
+          [subtotal]="order.subtotal"
+          [total]="order.total"
+          [discount]="order.discount"
+        ></app-order-totals>
+        <div *ngIf="(currentRole$ | async) === 'Moderator' || (currentRole$ | async) === 'Admin'">
+          <div class="badge bg-primary text-wrap mb-2" >
+            Delivery Method: {{DeleiveryMethod}}
+          </div>
+          <div *ngIf="order.deliveryMethod == 1 " class="mb-2"><button [disabled]="disabled" (click)="OrderReady(order.id)" class="btn btn-success">Order Ready</button></div>
+        </div>
+       
+        <app-order-address *ngIf="(currentRole$ | async) === 'Moderator' || (currentRole$ | async) === 'Admin'"
+          [address]="order.shipToAddress">
+        </app-order-address>
+      </div>
+    </div>
+    
+  </div>

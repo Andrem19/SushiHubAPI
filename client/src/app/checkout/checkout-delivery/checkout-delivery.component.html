@@ -1,0 +1,61 @@
+<div class="mt-4" [formGroup]="checkoutForm">
+    <h4 class="mb-3">Choose your delivery method</h4>
+    <div class="row" formGroupName="deliveryForm">
+
+        <div *ngIf="(pointInfo$ | async).enable" class="col-12 form-group">
+            <input id="pickup" value="pickup" type="radio"
+                (click)="setShippingPrice(0.90)"
+                formControlName="deliveryMethod"
+                class="custom-control-input"
+            >
+            <label for="pickup" class="custom-control-label">
+                <strong>You can pick up by yourself from our point(discount -10%)</strong>
+                <br />
+                <span class="label-description">Address: {{(pointInfo$ | async).city}} {{(pointInfo$ | async).house}} {{(pointInfo$ | async).street}} {{(pointInfo$ | async).postCode}} </span>
+                <br />
+                <strong>You will receive a notification when the order is ready(1h)</strong>
+            </label>
+        </div>
+
+        <div class="col-12 form-group" *ngIf="(pointInfo$ | async).freeZone else costdel">
+            <input id="free" value="free" type="radio"
+                (click)="setShippingPrice(3)"
+                formControlName="deliveryMethod"
+                class="custom-control-input"
+            >
+            <label for="free" class="custom-control-label">
+                <strong>Free Delivery(1-2h)</strong>
+                
+            </label>
+        </div>
+
+        <ng-template #costdel>
+
+            <div *ngIf="(pointInfo$ | async).deliveryCost !== 0 else noDelivery" class="col-12 form-group">
+                <input id="cost" value="cost" type="radio"
+                    (click)="setShippingPrice(5)"
+                    formControlName="deliveryMethod"
+                    class="custom-control-input"
+                >
+                <label for="cost" class="custom-control-label">
+                    <strong>Delivery(2-3h)</strong>
+                    <br />
+                    <span class="label-description">Cost: {{(pointInfo$ | async).deliveryCost | currency:"GBP":"symbol"}}</span>
+                </label>
+            </div>
+        <ng-template #noDelivery>
+            <br />
+            <strong>No delivery service in your location</strong>
+        </ng-template>
+        </ng-template>
+    </div>
+</div>
+
+<div class="float-none d-flex justify-content-between flex-column flex-lg-row mb-5">
+    <button class="btn btn-outline-primary" cdkStepperPrevious>
+        <i class="fa fa-angle-left"></i> Back to address
+    </button>
+    <button [disabled]="checkoutForm.get('deliveryForm').invalid" class="btn btn-primary" cdkStepperNext>
+        Go to review <i class="fa fa-angle-right"></i>
+    </button>
+</div>

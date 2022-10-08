@@ -1,0 +1,127 @@
+<div class="container mt-2">
+    <div *ngIf="(allSquares$ | async)">
+        <div class="pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 py-5 mb-1">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="border-0 bg-light" scope="col">
+                                            <div class="p-2 px-3 text-uppercase">Squares</div>
+                                        </th>
+                                        <th scope="col" class=" border-0 bg-light">
+                                            <div class=" py-2 text-uppercase">Remove</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let square of (allSquares$ | async)">
+                                        <th scope="row">
+                                            <div class="p-2">
+                                                {{square.city}}
+                                                <div class="ml-3 d-inline-block align-middle">
+                                                    <h5 class="mb-0">
+                                                        {{square.point}}
+                                                    </h5>
+                                                    <h6>{{square.city}}</h6>
+                                                    <h6>{{square.street}}</h6>
+                                                    <h6>{{square.house}}</h6>
+                                                    <h6>{{square.postCode}}</h6>
+                                                    <br/>
+                                                    <h6>{{square.deliveryCost}}</h6>
+                                                    <h6>{{square.freeZone}}</h6>
+                                                    <br/>
+                                                    <h6>{{square.latN}}</h6>
+                                                    <h6>{{square.latS}}</h6>
+                                                    <h6>{{square.lonW}}</h6>
+                                                    <h6>{{square.lonE}}</h6>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td class="align-middle">
+                                            <a class="text-danger">
+                                                <i (click)="removeSquare(square.id)" class="fa fa-trash"  style="font-size: 2em; cursor: pointer;"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <div class="row">
+    <div class="col-4">
+        <form [formGroup]="formSquare" (ngSubmit)="onSubmit()">
+            <input formControlName="Point" type="text" class="form-control" style="max-width: 100%;" placeholder="Point">
+            <input formControlName="City" type="text" class="form-control" style="max-width: 100%;" placeholder="City">
+
+            <input formControlName="Street" type="text" class="form-control" style="max-width: 100%;" placeholder="Street">
+            <input formControlName="House" type="text" class="form-control" style="max-width: 100%;" placeholder="House">
+            <input formControlName="PostCode" type="text" class="form-control" style="max-width: 100%;" placeholder="PostCode">
+            <input formControlName="DeliveryCost" type="text" class="form-control" style="max-width: 100%;" placeholder="DeliveryCost">
+            
+            <label><h5>FreeZone: </h5></label>
+            <label class="ml-3">
+                <input type="radio" name="FreeZone" formControlName="FreeZone" [value]="true" />True
+            </label>
+            <label class="ml-3">
+                <input type="radio" name="FreeZone" formControlName="FreeZone" [value]="false" />False
+            </label>
+
+            <input formControlName="LatN" type="text" class="form-control" style="max-width: 100%;" placeholder="LatN">
+            <input formControlName="LatS" type="text" class="form-control" style="max-width: 100%;" placeholder="LatS">
+            <input formControlName="LonW" type="text" class="form-control" style="max-width: 100%;" placeholder="LonW">
+            <input formControlName="LonE" type="text" class="form-control" style="max-width: 100%;" placeholder="LonE">
+
+            <button type="input" class="btn btn-primary">Create New Square</button>
+        </form>
+    </div>
+    <div class="col-4">
+        <div [formGroup]="addressForm">
+            <div class="form-group">
+                <input formControlName="name" class="form-control" placeholder="Name" type="text">
+            </div>
+            <div class="form-group">
+                <input formControlName="telephoneNumber" class="form-control" placeholder="Telephone Number" type="text">
+            </div>
+            <div class="form-group">
+                <input formControlName="postCode" class="form-control" placeholder="Post Code" type="text">
+            </div>
+            <div class="form-group">
+                <input formControlName="numberOfHouse" class="form-control" placeholder="Address Line 1" type="text">
+            </div>
+            <div class="form-group ">
+                <input formControlName="street" class="form-control" placeholder="Address Line 2" type="text">
+            </div>
+            <div class="form-group">
+                <input formControlName="city" class="form-control" placeholder="City" type="text">
+            </div>
+            <button type="input" (click)="CheckAddress()" class="btn btn-primary">Check address</button>
+        </div>
+    </div>
+
+    <div *ngIf="(squareCheck$ | async)" class="col-4">
+        <div class="row">
+            <div class="col-6"><h6>Enable: </h6></div><div class="col-6"><h6>{{(squareCheck$ | async).enable}}</h6></div>
+        
+            <div class="col-6"><h6>Point: </h6></div><div class="col-6"><h6>{{(squareCheck$ | async).pointNumber}}</h6></div>
+            <div class="col-6"><h6>Free Zone: </h6></div><div class="col-6"><h6>{{(squareCheck$ | async).freeZone}}</h6></div>
+            <div class="col-6"><h6>Delivery Cost</h6></div><div class="col-6"><h6>{{(squareCheck$ | async).deliveryCost}}</h6></div>
+        <br/>
+            <div class="col-6"><h6>City</h6></div><div class="col-6"><h6>{{(squareCheck$ | async).city}}</h6></div>
+            <div class="col-6"><h6>Line 1</h6></div><div class="col-6"><h6>{{(squareCheck$ | async).street}}</h6></div>
+            <div class="col-6"><h6>Line 2</h6></div><div class="col-6"><h6>{{(squareCheck$ | async).house}}</h6></div>
+            <div class="col-6"><h6>Post Code</h6></div><div class="col-6"><h6>{{(squareCheck$ | async).postCode}}</h6></div>
+        </div>
+    </div>
+</div>
+    <div>
+        
+    </div>
+
+</div>

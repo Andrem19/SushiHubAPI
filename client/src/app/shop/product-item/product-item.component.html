@@ -1,0 +1,54 @@
+<div class="card h-100 shadow-sm">
+    <div class="image position-relative" style="cursor: pointer;">
+        <img src="{{product.pictureUrl}}" alt="{{product.name}}" class="img-fluid bg-info">
+   
+
+<div *ngIf="innerWidth > 820" class="row d-flex align-items-center justify-content-end hover-overlay" style="margin-left: 0px; padding-bottom: 10px; width: 100%;">
+        <div style="padding-top: 20px;" class="col-md-9 mr-3">
+            <div class="row d-flex">
+                <div class="col-6 outline" *ngFor="let ingridient of product.ingridients">   
+                    <p style="font-size: 70%;">⚫{{ingridient}}</p>
+                </div>
+            </div>
+        </div> 
+        <div class="row d-flex">
+            <div class="col-md-3"></div>
+            <div class="col-md-9" style="margin-left: 35px; padding-bottom: 10px; width: 100%;" >
+                <button (click)="addItemToBasket()" type="button" class="btn btn-primary fa fa-shopping-cart mr-2"></button>
+                <button routerLink="/shop/{{product.id}}" type="button" class="btn btn-primary">View</button>
+        </div>
+    </div>  
+</div>
+
+    </div>
+
+
+    <div *ngIf="innerWidth > 820 else mobile" class="card-body d-flex flex-column">
+        <div class="row d-flex">
+            <div class="col-6">
+                <h6 class="text-uppercase">{{product.name}}</h6>
+            </div>
+            <ng-template #mobile class="col-6">
+                <button (click)="addItemToBasket()" type="button" style="width: 100%;" class="btn btn-primary fa fa-shopping-cart mr-2"></button>
+            </ng-template>
+        </div>
+        <span class="mb-2">{{product.price | currency:"GBP":"symbol"}}</span>
+    </div>
+
+    <ng-template #mobile class="card-body d-flex flex-column">
+        <div class="row d-flex">
+            <div class="col-12 d-flex justify-content-center">
+                <h6>{{product.name}}</h6>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+                <span class="mb-1 font-weight-bold">{{product.price | currency:"GBP":"symbol"}}</span>
+            </div>
+            
+            
+        </div>
+        <div class="col-12 pb-1" >
+            <button (click)="addItemToBasket()" type="button" style="width: 100%; padding-right: 3px;" class="btn btn-primary fa fa-shopping-cart mr-2"></button>
+        </div>
+        
+    </ng-template>
+</div>

@@ -1,0 +1,23 @@
+<div class="mt-4">
+    <app-basket-summary 
+        [isBasket]=false
+        [items]="(basket$ | async).items"
+        ></app-basket-summary>
+</div>
+<div *ngIf="innerWidth < 820" class="col-4">
+    <app-order-totals
+    *ngIf="(basketTotals$ | async)"
+    [shippingPrice]="(basketTotals$ | async).shipping"
+    [subtotal]="(basketTotals$ | async).subtotal"
+    [total]="(basketTotals$ | async).total"
+    [discount]="(basketTotals$ | async).discount">
+    </app-order-totals>
+</div>
+<div class="float-none d-flex justify-content-between flex-column flex-lg-row mb-5">
+    <button class="btn btn-outline-primary" cdkStepperPrevious>
+        <i class="fa fa-angle-left"></i> Back to Delivery
+    </button>
+    <button class="btn btn-primary" (click)="createPaymentIntent()">
+        Go to Payment <i class="fa fa-angle-right"></i>
+    </button>
+</div>

@@ -1,0 +1,164 @@
+[
+  {
+    "Name": "Sushi Nigiri",
+    "Ingridients": "ipsum,ipsum,doloripsum,sit,amet",
+    "Price": 200,
+    "popularity": 5,
+    "PictureUrl": "https://res.cloudinary.com/dodijnztn/image/upload/v1657369476/glove-react1_oqrar1.png",
+    "ProductType": "Filadelfia",
+    "minutesToMake": 10
+  },
+  {
+    "Name": "Filadelfia Salmon",
+    "Ingridients": "ipsum,ipsum,doloripsum,sit,amet",
+    "Price": 150,
+    "popularity":  10,
+    "PictureUrl": "https://res.cloudinary.com/dodijnztn/image/upload/v1657369476/glove-code2_aqpz8h.png",
+    "ProductType": "Filadelfia",
+    "minutesToMake": 10
+  },
+  {
+    "Name": "California",
+    "Ingridients": "ipsum,ipsum,doloripsum,sit,amet",
+    "Price": 180,
+    "popularity": 15,
+    "PictureUrl": "https://res.cloudinary.com/dodijnztn/image/upload/v1657369476/hat-core1_oemxpd.png",
+    "ProductType": "Filadelfia",
+    "minutesToMake": 10
+  },
+  {
+    "Name": "California",
+    "Ingridients": "ipsum,ipsum,doloripsum,sit,amet",
+    "Price": 300,
+    "popularity": 16,
+    "PictureUrl": "https://res.cloudinary.com/dodijnztn/image/upload/v1657369476/boot-core1_nkdxob.png",
+    "ProductType": "California",
+    "minutesToMake": 10
+  },
+  {
+    "Name": "Filadelfia Salmon",
+    "Ingridients": "ipsum,ipsum,doloripsum,sit,amet",
+    "Price": 250,
+    "popularity": 8,
+    "PictureUrl": "https://res.cloudinary.com/dodijnztn/image/upload/v1657369476/boot-redis1_dwlytw.png",
+    "ProductType": "California",
+    "minutesToMake": 10
+  },
+  {
+    "Name": "Filadelfia Salmon",
+    "Ingridients": "ipsum,ipsum,doloripsum,sit,amet",
+    "Price": 120,
+    "popularity": 10,
+    "PictureUrl": "https://res.cloudinary.com/dodijnztn/image/upload/v1657369477/boot-core2_qqnpjr.png",
+    "ProductType": "Sushi",
+    "minutesToMake": 10
+  },
+  {
+    "Name": "Filadelfia Salmon",
+    "Ingridients": "ipsum,ipsum,doloripsum,sit,amet",
+    "Price": 10,
+    "popularity": 20,
+    "PictureUrl": "https://res.cloudinary.com/dodijnztn/image/upload/v1657369477/hat-react2_mi5kc9.png",
+    "ProductType": "Futumaki",
+    "minutesToMake": 10
+  },
+  {
+    "Name": "Filadelfia Salmon",
+    "Ingridients": "ipsum,ipsum,doloripsum,sit,amet",
+    "Price": 8,
+    "popularity": 21,
+    "PictureUrl": "https://res.cloudinary.com/dodijnztn/image/upload/v1657369478/hat-react1_oadcru.png",
+    "ProductType": "Futumaki",
+    "minutesToMake": 10
+  },
+  {
+    "Name": "Filadelfia Salmon",
+    "Ingridients": "ipsum,ipsum,doloripsum,sit,amet",
+    "Price": 15,
+    "popularity": 25,
+    "PictureUrl": "https://res.cloudinary.com/dodijnztn/image/upload/v1657369474/sb-ang2_ju20aw.png",
+    "ProductType": "Sushi",
+    "minutesToMake": 10
+  },
+  {
+    "Name": "Filadelfia Salmon",
+    "Ingridients": "ipsum,ipsum,doloripsum,sit,amet",
+    "Price": 18,
+    "popularity": 17,
+    "PictureUrl": "https://res.cloudinary.com/dodijnztn/image/upload/v1657369476/glove-react2_yf89di.png",
+    "ProductType": "Rolls",
+    "minutesToMake": 10
+  },
+  {
+    "Name": "Sushi Nigiri",
+    "Ingridients": "ipsum,ipsum,doloripsum,sit,amet",
+    "Price": 15,
+    "popularity": 30,
+    "PictureUrl": "https://res.cloudinary.com/dodijnztn/image/upload/v1657369475/sb-ts1_owhubf.png",
+    "ProductType": "Sushi",
+    "minutesToMake": 10
+  },
+  {
+    "Name": "Sushi Nigiri",
+    "Ingridients": "ipsum,ipsum,doloripsum,sit,amet",
+    "Price": 16,
+    "popularity": 18,
+    "PictureUrl": "https://res.cloudinary.com/dodijnztn/image/upload/v1657369475/boot-ang2_twzqoh.png",
+    "ProductType": "Rolls",
+    "minutesToMake": 10
+  },
+  {
+    "Name": "Sushi Nigiri",
+    "Ingridients": "ipsum,ipsum,doloripsum,sit,amet",
+    "Price": 14,
+    "popularity": 12,
+    "PictureUrl": "https://res.cloudinary.com/dodijnztn/image/upload/v1657369475/sb-react1_izwpvd.png",
+    "ProductType": "Sushi",
+    "minutesToMake": 10
+  },
+  {
+    "Name": "Sushi Nigiri",
+    "Ingridients": "ipsum,ipsum,doloripsum,sit,amet",
+    "Price": 250,
+    "popularity": 18,
+    "PictureUrl": "https://res.cloudinary.com/dodijnztn/image/upload/v1657369475/glove-code1_qvo5ri.png",
+    "ProductType": "Rolls",
+    "minutesToMake": 10
+  },
+  {
+    "Name": "Sushi Nigiri",
+    "Ingridients": "ipsum,ipsum,doloripsum,sit,amet",
+    "Price": 189.99,
+    "popularity": 10,
+    "PictureUrl": "https://res.cloudinary.com/dodijnztn/image/upload/v1657369475/sb-ang1_eblxaf.png",
+    "ProductType": "Sushi",
+    "minutesToMake": 10
+  },
+  {
+    "Name": "Sushi Nigiri",
+    "Ingridients": "ipsum,ipsum,doloripsum,sit,amet",
+    "Price": 199.99,
+    "popularity": 10,
+    "PictureUrl": "https://res.cloudinary.com/dodijnztn/image/upload/v1657369475/sb-core2_fqmffv.png",
+    "ProductType": "Sushi",
+    "minutesToMake": 10
+  },
+  {
+    "Name": "Sushi Nigiri",
+    "Ingridients": "ipsum,ipsum,doloripsum,sit,amet",
+    "Price": 150,
+    "popularity": 10,
+    "PictureUrl": "https://res.cloudinary.com/dodijnztn/image/upload/v1657369475/sb-core1_qvzj98.png",
+    "ProductType": "Nigiri",
+    "minutesToMake": 10
+  },
+  {
+    "Name": "Sushi Nigiri",
+    "Ingridients": "ipsum,ipsum,doloripsum,sit,amet",
+    "Price": 180,
+    "popularity": 10,
+    "PictureUrl": "https://res.cloudinary.com/dodijnztn/image/upload/v1657369475/boot-ang1_zzj05c.png",
+    "ProductType": "Nigiri",
+    "minutesToMake": 10
+  }
+]

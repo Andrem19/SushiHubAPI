@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="row">
+        
+      <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="p-2" [routerLink]="['./dashboard']" routerLinkActive="active"><i class="fa fa-tachometer mr-3"></i>Dashboard</a>
+            </li>
+            <li class="nav-item mt-2">
+                <a class="p-2" [routerLink]="['./allorders']" routerLinkActive="active"><i class="fa fa-first-order mr-3"></i>Orders</a>
+            </li>
+            <li class="nav-item mt-2">
+                <a class="p-2" [routerLink]="['./products']" routerLinkActive="active"><i class="fa fa-shopping-basket mr-3"></i>Products</a>
+            </li>
+            <li class="nav-item mt-2">
+              <a class="p-2" [routerLink]="['./category']" routerLinkActive="active"><i class="fa fa-cubes mr-3"></i>Categories</a>
+          </li>
+          <li class="nav-item mt-2">
+            <a class="p-2" [routerLink]="['./allbaskets']" routerLinkActive="active"><i class="fa fa-shopping-basket mr-3"></i>All Baskets</a>
+        </li>
+            <li class="nav-item mt-2">
+                <a class="p-2" [routerLink]="['./roles']" routerLinkActive="active"><i class="fa fa-user-plus mr-3"></i>Roles</a>
+            </li>
+            <li class="nav-item mt-2">
+                <a class="p-2" [routerLink]="['./squares']" routerLinkActive="active"><i class="fa fa-map mr-3"></i>Squares</a>
+            </li>
+            <li class="nav-item mt-2">
+              <a class="p-2" [routerLink]="['./promoCodes']" routerLinkActive="active"><i class="fa fa-codepen mr-3"></i>Promo Codes</a>
+          </li>
+            <li class="nav-item mt-2">
+                <a class="p-2" [routerLink]="['./statistic']" routerLinkActive="active"><i class="fa fa-area-chart mr-3"></i>Statistic</a>
+            </li>
+            <li class="nav-item mt-2">
+              <a class="p-2" [routerLink]="['./settings']" routerLinkActive="active"><i class="fa fa-cogs mr-3"></i>Settings</a>
+          </li>
+          </ul>
+          
+        </div>
+        
+      </nav>
+      <div class="col-md-10">
+        <router-outlet></router-outlet>
+    </div>
+    </div>
+    
+  </div>
+  
